@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/slide.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar-container">
+      <h1 style="font-style: italic">Coffee Shop</h1>
+      <ul class="nav-list">
+        <li><a href="#desc">Description</a></li>
+        <li><a href="#coffee">Coffee</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="slideshow-container">
+      <div class="mySlides fade text">
+        <h1><i>Coffee Shop</i></h1>
+      </div>
+
+      <div class="mySlides fade">
+        <h1 class="text-title">Coffee Shop</h1>
+        <p class="text-desc">Awali harimu dengan kopi</p>
+        <a href="#coffee" class="arrow-bottom">&#10094;</a>
+      </div>
+
+      <div class="mySlides fade">
+        <h1 class="text-title">Coffee Shop</h1>
+        <p class="text-desc">Pahitnya hidup bukan pilihan, pahitnya kopi A adalah pilihan yang bikin nikmat.</p>
+        <a href="#coffee" class="arrow-bottom">&#10094;</a>
+      </div>
+
+      <!-- Pointer -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </header>
+    <!-- End Navigation bar -->
+
+    <!-- Main -->
+    <main>
+      <!-- Content -->
+      <div class="content">
+        <!-- description -->
+        <article class="desc" id="desc">
+          <div id="img-container">
+            <img src="./img/coffee-1.jpg" alt="Coffee-1" id="img-1" />
+          </div>
+          <section>
+            <q>Kualitas hidup sesungguhnya adalah seperti kualitas kopi dalam cangkir. Apapun bentuk dan kualitas cangkirnya. Kopi yang baik tetaplah terasa nikmat bagi siapapun yang meminumnya. </q>
+            <p>- Achmad Zaky</p>
+          </section>
+        </article>
+
+        <!-- list coffee -->
+        <article class="coffee" id="coffee">
+          <h2>Coffee</h2>
+          <section>
+            <div>
+              <img src="./img/coffee-5.png" alt="coffee-5" />
+              <div class="label">
+                <h4>Expresso</h4>
+                <p>Rp 20.000</p>
+                <button>Beli</button>
+              </div>
+            </div>
+            <div>
+              <img src="./img/coffee-5.png" alt="coffee-5" />
+              <div class="label">
+                <h4>Curto</h4>
+                <p>Rp 20.000</p>
+                <button>Beli</button>
+              </div>
+            </div>
+            <div>
+              <img src="./img/coffee-5.png" alt="coffee-5" />
+              <div class="label">
+                <h4>Carioca</h4>
+                <p>Rp 20.000</p>
+                <button>Beli</button>
+              </div>
+            </div>
+            <div>
+              <img src="./img/coffee-5.png" alt="coffee-5" />
+              <div class="label">
+                <h4>Latte Cappucino</h4>
+                <p>Rp 15.000</p>
+                <button>Beli</button>
+              </div>
+            </div>
+            <div>
+              <img src="./img/coffee-5.png" alt="coffee-5" />
+              <div class="label">
+                <h4>Swish Chocolate</h4>
+                <p>Rp 20.000</p>
+                <button>Beli</button>
+              </div>
+            </div>
+
+            <div>
+              <img src="./img/coffee-5.png" alt="coffee-5" />
+              <div class="label">
+                <h4>Especiarias</h4>
+                <p>Rp 20.000</p>
+                <button>Beli</button>
+              </div>
+            </div>
+
+            <div>
+              <img src="./img/coffee-5.png" alt="coffee-5" />
+              <div class="label">
+                <h4>Irish coffee</h4>
+                <p>Rp 15.000</p>
+                <button>Beli</button>
+              </div>
+            </div>
+
+            <div>
+              <img src="./img/coffee-5.png" alt="coffee-5" />
+              <div class="label">
+                <h4>Latte</h4>
+                <p>Rp 30.000</p>
+                <button>Beli</button>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+      <!-- End Content -->
+
+      <!-- Aside -->
+      <aside id="contact">
+        <section>
+          <img src="./img/foto-diri-2.png" />
+          <p>Muhammad Rizki</p>
+          <b>Owner</b>
+        </section>
+      </aside>
+      <!-- End Aside -->
+    </main>
+    <!-- End main -->
+
+    <!-- Footer -->
+    <footer>copyright &copy; Muhammad Rizki</footer>
+    <!-- End Footer -->
+
+    <script src="js/slides.js"></script>
+    <script>
+      const img1 = document.getElementById('img-1');
+      const c_img1 = document.getElementById('img-container');
+
+      function myFunction(x) {
+        if (x.matches) {
+          // If media query matches
+          img1.removeAttribute();
+          // c_img1.removeAttribute();
+        } else {
+          // document.body.style.backgroundColor = 'pink';
+        }
+      }
+
+      var x = window.matchMedia('(max-width: 700px)');
+      myFunction(x); // Call listener function at run time
+      x.addListener(myFunction); // Attach listener function on state changes
+    </script>
+  </body>
+</html>
